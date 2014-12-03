@@ -4,6 +4,5 @@ users:
     shell: /bin/bash
     state: present
     password: $6$rounds=100000$gwCNJ6Z5CscmJn2W$uNlnIPFkEfj95Ub/EfBJTW6vyheC0o1e4YifImmHstHhUdWHEEyQ0icorZU.ts5kOGhPCEN1a3cL4Kwz3gr/D1
-    groups:
-      - sudo
-      - tim
+    groups: sudo, tim
+
