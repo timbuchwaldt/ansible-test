@@ -23,6 +23,10 @@
     action: user name={{ item.key }} password={{ item.value.password }} shell={{ item.value.shell }} state={{ item.value.state }} update_password=always groups={{ item.value.groups }}
     with_dict: users
 
+  - name: Add public keys
+    action: authorized_key user={{ item.key }} key={{ item.values.pubkey  }}
+    with_dict: users
+
   handlers:
 
   - name: reboot
