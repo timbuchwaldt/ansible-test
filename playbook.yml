@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
   vars_files:
-    - vars/default.yml
+     - vars/default.yml
 
   - apt: update_cache=yes cache_valid_time=3600
 
