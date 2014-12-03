@@ -20,7 +20,7 @@
     apt: pkg=ntp state=latest
 
   - name: Add users
-    action: user name={{ item.key }} password={{ item.value.password }} shell={{ item.value.shell }} state={{ item.value.state }} update_password=create groups={{ item.value.groups }}
+    action: user name={{ item.key }} password={{ item.value.password }} shell={{ item.value.shell }} state={{ item.value.state }} update_password=on_create groups={{ item.value.groups }}
     with_dict: users
 
   - name: Add public keys
