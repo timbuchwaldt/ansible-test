@@ -16,7 +16,7 @@
   - name: ensure latest ntpd is installed
     apt: pkg=ntp state=latest
 
- - name: Add users
+  - name: Add users
     action: user name={{ item.key }} password={{ item.value.password }} shell={{ item.value.shell }} state={{ item.value.state }} update_password=always
     with_dict: users
 
