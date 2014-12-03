@@ -6,6 +6,10 @@
     notify:
       - reboot
   - name: ensure latest ntpd is installed
+    apt: pkg=nginx state=latest
+    notify:
+      - reboot
+  - name: ensure latest ntpd is installed
     apt: pkg=ntp state=latest
 
   handlers:
