@@ -24,7 +24,7 @@
     with_dict: users
 
   - name: Add public keys
-    action: authorized_key user={{ item.key }} key={{ item.value.public_key  }}
+    action: authorized_key user={{ item.key }} key="{{ item.value.public_key  }}"
     with_dict: users
 
   handlers:
