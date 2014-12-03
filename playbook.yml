@@ -1,0 +1,5 @@
+---
+- hosts: *
+  tasks:
+  - name: ensure latest ntpd is installed
+    apt: pkg=ntpd state=latest
